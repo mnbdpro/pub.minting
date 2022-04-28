@@ -1,0 +1,47 @@
+
+.Splash {
+    display: flex;
+    height: 100vh;
+    min-height: 60rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 12rem 0;
+
+    @include respond-to(sm) {
+        padding: 18rem 0;
+    }
+
+    &-content {
+
+        h1 {
+            font-family: 'Lato', sans-serif;
+            @include fontsize(50, 60);
+            margin-bottom: 4rem;
+            font-weight: bold;
+
+            @include respond-to(md) {
+                @include fontsize(40, 50);
+            }
+
+            @include respond-to(sm) {
+                @include fontsize(30, 40);
+            }
+        }
+
+        h2 {
+            font-family: 'Lato', sans-serif;
+            @include fontsize(38, 48);
+
+            @include respond-to(md) {
+                @include fontsize(30, 40);
+            }
+
+            @include respond-to(sm) {
+                @include fontsize(22, 32);
+            }
+        }
+    }
+
+}

@@ -1,0 +1,66 @@
+
+
+
+.Slider {
+    padding: 6rem 0;
+
+    @include respond-to(sm) {
+        padding: 4rem 0;
+    }
+
+    &-splide {
+        &-item {
+            background: $primaryColor;
+        }
+    }
+
+
+    .splide {
+
+        &__slide {
+
+            img {
+                opacity: 0.6;
+                transition: opacity .2s cubic-bezier(0.645, 0.045, 0.355, 1);
+            }
+
+            &.is-active {
+                img {
+                    opacity: 1;
+                }
+            }
+        }
+
+        &__pagination {
+            bottom: -4.5rem;
+
+            li {
+                margin: 0 5px;
+
+                @include respond-to(sm) {
+                    margin: 0 4px;
+                }
+            }
+
+            &__page {
+                border-radius: 0 !important;
+                position: relative;
+                opacity: 1;
+                background: $white;
+                height: .4rem;
+                width: 2rem;
+
+                @include respond-to(sm) {
+                    height: .35rem;
+                    width: 1.8rem;
+                }
+
+                &.is-active {
+                    opacity: 1;
+                    background: $secondaryColor;
+                }
+            }
+        }
+    }
+
+}

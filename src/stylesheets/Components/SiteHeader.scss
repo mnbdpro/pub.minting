@@ -1,0 +1,78 @@
+
+.SiteHeader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    padding: 2rem 0;
+    background: none;
+    transition: background .3s cubic-bezier(0.215, 0.61, 0.355, 1),
+    background-color .3s cubic-bezier(0.215, 0.61, 0.355, 1),
+    transform 200ms cubic-bezier(0.215, 0.61, 0.355, 1);
+
+    &-logo {
+        font-family: 'Lato', sans-serif;
+        @include fontsize(50, 50);
+
+        @include respond-to(md) {
+            @include fontsize(26, 26);
+        }
+
+        @include respond-to(sm) {
+            margin-bottom: 1rem;
+            @include fontsize(30, 30);
+        }
+
+        @include respond-to(xs) {
+            @include fontsize(24, 24);
+        }
+
+        img {
+            height: 6rem;
+            width: auto;
+
+            @include respond-to(md) {
+                height: 5rem;
+            }
+
+            @include respond-to(sm) {
+                height: 4rem;
+            }
+        }
+    }
+
+    &-socialnav {
+        .Button {
+            margin-left: 2rem;
+
+            @include respond-to(sm) {
+                margin-left: 0;
+            }
+
+            &:not(.is-walletConnect) {
+                @include respond-to(sm) {
+                    margin: 0 1rem;
+                }
+            }
+        }
+    }
+
+
+    &.headroom {
+        will-change: transform;
+
+        &--pinned {
+            transform: translate3d(0, 0, 0);
+            background-color: rgba($primaryColor, 0.6);
+        }
+
+        &--unpinned {
+            transform: translate3d(0, -100%, 0);
+        }
+
+        &--top {
+            background: none;
+        }
+    }
+}

@@ -1,0 +1,198 @@
+
+.InputNumber {
+    display: flex;
+    background: none;
+    align-items: center;
+    border-radius: 5px;
+    @include fontsize(30, 30);
+    margin: 1rem 0;
+    border: 1px solid #8498A7;
+    width: 50%;
+    text-align: center;
+    justify-content: space-between;
+    overflow: hidden;
+
+    &-counter {
+        background: darkgrey;
+        position: relative;
+        height: 5rem;
+        color: #333C48;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    &-counter.is-input &-counter-num {
+        visability: hidden;
+        opacity: 0;
+        -webkit-transition: opacity 100ms ease-in;
+        transition: opacity 100ms ease-in;
+    }
+
+    &-counter.is-input &-counter-input {
+        visability: visible;
+        opacity: 1;
+        -webkit-transition: opacity 100ms ease-in;
+        transition: opacity 100ms ease-in;
+    }
+
+    &-counter-input {
+        background-color: #333C48;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        z-index: 2;
+        box-shadow: none;
+        outline: none;
+        border: none;
+        color: #333C48;
+        font-size: 30px;
+        line-height: 5rem;
+        text-align: center;
+        visability: hidden;
+        opacity: 0;
+        -webkit-transition: opacity 100ms ease-in;
+        transition: opacity 100ms ease-in;
+    }
+
+    &-counter-num {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        line-height: 5rem;
+        visability: visible;
+        opacity: 1;
+        -webkit-transition: opacity 100ms ease-in;
+        transition: opacity 100ms ease-in;
+        color: $white;
+
+        &.is-increment-hide {
+            opacity: 0;
+            -webkit-transform: translateY(-25px);
+            transform: translateY(-25px);
+            -webkit-animation: increment-prev 100ms ease-in;
+            animation: increment-prev 100ms ease-in;
+        }
+
+        &.is-increment-visible {
+            opacity: 1;
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+            -webkit-animation: increment-next 100ms ease-out;
+            animation: increment-next 100ms ease-out;
+        }
+
+        &.is-decrement-hide {
+            opacity: 0;
+            -webkit-transform: translateY(25px);
+            transform: translateY(25px);
+            -webkit-animation: decrement-prev 100ms ease-in;
+            animation: decrement-prev 100ms ease-in;
+        }
+
+        &.is-decrement-visible {
+            opacity: 1;
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+            -webkit-animation: decrement-next 100ms ease-out;
+            animation: decrement-next 100ms ease-out;
+        }
+    }
+
+    &-button {
+        width: 5rem;
+        height: 5rem;
+        text-align: center;
+        color: #FFFFFF;
+        cursor: pointer;
+        background-color: #8498A7;
+        -webkit-transition: background-color 100ms ease-in;
+        transition: background-color 100ms ease-in;
+
+        span {
+            display: block;
+            height: 5rem;
+            line-height: 5rem;
+            fill: #FFF;
+            position: relative;
+            top: -2px;
+            -webkit-touch-callout: none; /* iOS Safari */
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Old versions of Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+        }
+    }
+
+    &-button:hover {
+        background-color: $secondaryColor;
+        -webkit-transition: background-color 100ms ease-in;
+        transition: background-color 100ms ease-in;
+    }
+
+    &-button:active {
+        background-color: #778996;
+        -webkit-transition: background-color 100ms ease-in;
+        transition: background-color 100ms ease-in;
+    }
+
+    @-webkit-keyframes decrement-prev {
+        from {
+            opacity: 1;
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+        }
+    }
+    @keyframes decrement-prev {
+        from {
+            opacity: 1;
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+        }
+    }
+    @-webkit-keyframes decrement-next {
+        from {
+            opacity: 0;
+            -webkit-transform: translateY(-25px);
+            transform: translateY(-25px);
+        }
+    }
+    @keyframes decrement-next {
+        from {
+            opacity: 0;
+            -webkit-transform: translateY(-25px);
+            transform: translateY(-25px);
+        }
+    }
+    @-webkit-keyframes increment-prev {
+        from {
+            opacity: 1;
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+        }
+    }
+    @keyframes increment-prev {
+        from {
+            opacity: 1;
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+        }
+    }
+    @-webkit-keyframes increment-next {
+        from {
+            opacity: 0;
+            -webkit-transform: translateY(25px);
+            transform: translateY(25px);
+        }
+    }
+    @keyframes increment-next {
+        from {
+            opacity: 0;
+            -webkit-transform: translateY(25px);
+            transform: translateY(25px);
+        }
+    }
+}

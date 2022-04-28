@@ -1,0 +1,39 @@
+
+.Footer {
+    background: $primaryColor;
+    padding: 2rem 0;
+
+    &-content {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        @include fontsize(20, 20);
+
+        &.is-logo {
+            font-family: 'Lato', sans-serif;
+            @include fontsize(26, 26);
+        }
+
+        @include respond-to(sm) {
+            justify-content: center;
+            padding-bottom: 2rem;
+        }
+    }
+
+    &-social {
+        display: flex;
+        justify-content: flex-end;
+
+        @include respond-to(sm) {
+            justify-content: center;
+        }
+
+        .Button {
+            margin-left: 2rem;
+
+            @include respond-to(sm) {
+                margin: 0 1rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+//--> Abstracts
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+//--> lib
+@import "~bootstrap/scss/bootstrap";
+
+//--> Base
+@import "base/fonts";
+@import "base/base";
+
+//--> Lib
+@import "lib/glitch";
+@import "lib/splide";
+
+//--> Components
+@import "Components/Button";
+@import "Components/Faq";
+@import "Components/Footer";
+@import "Components/Presentation";
+@import "Components/Roadmap";
+@import "Components/SiteHeader";
+@import "Components/Slider";
+@import "Components/Splash";
+@import "Components/Team";
+@import "Components/Timeline";
+@import "Components/InputNumber";
+@import "Components/MintModal";
+
+
+
+
+

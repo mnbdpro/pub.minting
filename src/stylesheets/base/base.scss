@@ -1,0 +1,123 @@
+html {
+	font-size: 62.5%;
+	margin-top: 0 !important;
+}
+
+body {
+	
+	background: url('/public/img/home.png') no-repeat center center fixed;
+	background-color: black;
+	color: #c68919;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	height: auto;
+	overflow-x: hidden;
+	overflow-y: scroll;
+
+	&.noScroll {
+		overflow: hidden;
+	}
+}
+
+.button {
+	border: 0;
+	background: #c68919;
+	background: #dd991c;
+	background: linear-gradient(to bottom, #dd991c 0%, #c68919 100%);
+	border: 2px #c68919 solid;
+	border-radius: 4px;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-family: sweet-gothic-serif,freight-text-pro,Garamond,Baskerville,Baskerville Old Face,Hoefler Text,Times New Roman,serif;
+	font-size: 1em;
+	font-weight: 400;
+	position: relative;
+	padding: 0.675rem 1.5rem;
+	text-align: center;
+	-webkit-transition: left ease .375s;
+	-moz-transition: left ease .375s;
+	transition: left ease .375s;
+}
+
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-ms-interpolation-mode: nearest-neighbor;
+	image-rendering: auto;
+	text-rendering: auto;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+picture {
+	display: block;
+}
+
+ul, p {
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	display: block;
+}
+
+a {
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	font-size: 1em;
+	font-weight: normal;
+}
+
+b, strong {
+	font-weight: 500;
+}
+
+.objectFitCover {
+	picture {
+		width: 100%;
+		height: 100%;
+	}
+	img, video {
+		width: 100%;
+		height: 100%;
+		-o-object-fit: cover;
+		object-fit: cover;
+	}
+}
+
+.objectFitContain {
+	picture {
+		width: 100%;
+		height: 100%;
+	}
+	img, video {
+		width: 100%;
+		height: 100%;
+		-o-object-fit: contain;
+		object-fit: contain;
+	}
+}
+
+img, .noselect {
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+.red {
+	color: #ec1818;
+	font-weight: bold;
+}

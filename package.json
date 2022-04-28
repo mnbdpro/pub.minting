@@ -1,0 +1,48 @@
+{
+	"name": "voodoo",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "node server.js",
+		"build": "webpack",
+		"watch": "webpack --watch",
+		"heroku-postbuild": "webpack -p"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@popperjs/core": "^2.9.2",
+		"@splidejs/splide": "^2.4.21",
+		"bootstrap": "^5.0.2",
+		"gsap": "^1.18.0",
+		"hc-sticky": "^2.2.7",
+		"headroom.js": "^0.12.0",
+		"jquery": "^3.6.0",
+		"rxjs": "^6.6.2",
+		"express": "^4.17.1",
+		"path": "^0.12.7"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.11.1",
+		"@babel/preset-env": "^7.11.0",
+		"autoprefixer": "^10.2.4",
+		"babel-loader": "^8.1.0",
+		"css-loader": "^4.2.1",
+		"file-loader": "^6.0.0",
+		"html-loader": "^1.1.0",
+		"html-webpack-plugin": "^4.3.0",
+		"mini-css-extract-plugin": "^0.10.0",
+		"node-sass": "^4.14.1",
+		"postcss-loader": "^5.0.0",
+		"sass-loader": "^9.0.3",
+		"style-loader": "^1.2.1",
+		"webpack": "^4.44.1",
+		"webpack-cli": "^3.3.12",
+		"webpack-dev-server": "^3.11.0"
+	},
+	"engines": {
+		"node": "14.16.0",
+		"npm": "7.10.0"
+	}
+}

@@ -1,0 +1,109 @@
+.modal-content {
+    background-color: rgba(39, 46, 56, 0) !important;
+    border: 0px solid rgba(29,29,27,0);
+}
+.MintModal {
+    text-align: center;
+    color: black !important;
+
+    .modal {
+
+
+        &-title {
+            text-align: center;
+            font-family: 'Lato', sans-serif;
+            font-weight: bold;
+            @include fontsize(50, 80);
+            text-transform: uppercase;
+        }
+
+        &-body {
+            text-align: center;
+            background: $primaryColor;
+            padding: 2rem;
+        }
+    }
+
+    &-content {
+        text-align: center;
+        border: 0px solid rgba(29,29,27,0);
+        background: rgba(229, 228, 228, 0.847);
+        border-radius: 2%;
+        padding-bottom: 25px ;
+        &-walletAdress {
+            text-align: center;
+            background-color: rgba(39, 46, 56, 0) !important;
+            border: 0px solid rgba(29,29,27,0);
+            & > div {
+                background-color: rgba(39, 46, 56, 0) !important;
+                border: 0px solid rgba(29,29,27,0);
+                text-align: center;
+                @include fontsize(20, 25);
+                padding: 6px;
+                display: inline-block;
+                margin-bottom: 2rem;
+                font-weight: bold;
+                text-align: center;
+            }
+        }
+
+        &-input {
+            text-align: center;
+            margin-bottom: 1.4rem;
+            background-color: rgba(39, 46, 56, 0) !important;
+            border: 0px solid rgba(29,29,27,0);
+
+            & > label {
+                background-color: rgba(39, 46, 56, 0) !important;
+                border: 0px solid rgba(29,29,27,0);
+                text-align: center;
+                display: block;
+                font-family: 'Lato', sans-serif;
+                @include fontsize(40, 70);
+                font-weight: bold;
+            }
+
+            & > span {
+                background-color: rgba(39, 46, 56, 0) !important;
+                border: 0px solid rgba(29,29,27,0);
+                text-align: center;
+                display: block;
+                @include fontsize(18, 20);
+                font-weight: bold;
+            }
+        }
+
+        &-buttons {
+
+            button {
+                display: inline-block;
+                transition: all .3s cubic-bezier(0.215, 0.61, 0.355, 1);
+                @include fontsize(28, 32);
+                cursor: pointer;
+                text-transform: uppercase;
+                font-weight: bold;
+                color: $primaryColor;
+                text-align: center;
+                padding: 1rem 2rem;
+                border: 1px solid $primaryColor;
+                border-radius: 5px;
+
+                &:hover {
+                    color: $white;
+                    background: $secondaryColor;
+                }
+            }
+
+        }
+
+        &-remaining {
+            background-color: rgba(39, 46, 56, 0) !important;
+            border: 0px solid rgba(29,29,27,0);
+            text-align: center;
+            font-family: 'Lato', sans-serif;
+            margin-top: 1.4rem;
+            @include fontsize(24, 34);
+            font-weight: bold;
+        }
+    }
+}

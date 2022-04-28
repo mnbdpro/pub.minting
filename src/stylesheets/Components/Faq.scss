@@ -1,0 +1,50 @@
+
+
+.Faq {
+    padding-bottom: 12rem;
+
+    @include respond-to(sm) {
+        padding-bottom: 8rem;
+    }
+
+    &-title {
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+        @include fontsize(40, 50);
+        margin-bottom: 4rem;
+
+        @include respond-to(sm) {
+            margin-bottom: 3rem;
+            @include fontsize(30, 40);
+        }
+    }
+
+    &-question {
+        margin-bottom: 3rem;
+
+        @include respond-to(sm) {
+            margin-bottom: 2rem;
+        }
+
+        &-title {
+            font-family: 'Lato', sans-serif;
+            font-weight: bold;
+            @include fontsize(40, 50);
+            margin-bottom: .6rem;
+            color: $secondaryColor;
+
+            @include respond-to(sm) {
+                margin-bottom: .4rem;
+                @include fontsize(30, 40);
+            }
+        }
+
+        &-content {
+            @include fontsize(20, 28);
+
+            @include respond-to(sm) {
+                @include fontsize(18, 26);
+            }
+        }
+    }
+}

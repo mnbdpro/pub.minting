@@ -1,0 +1,116 @@
+
+.Timeline {
+    position: relative;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    .line {
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        background: hsla(0, 0%, 100%, .4);
+        left: 82px;
+
+        @include respond-to(sm) {
+            left: 52px;
+        }
+
+        .progression {
+            background: indianred;
+            background: linear-gradient(180deg, indianred, $secondaryColor 49%);
+            width: 3px;
+            height: 180px;
+            margin-left: -1px;
+
+            @include respond-to(sm) {
+                height: 130px;
+            }
+        }
+    }
+
+    .step {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        background: #04091A;
+        width: 100%;
+        padding: 50px 70px;
+        margin: 30px 0;
+
+        @include respond-to(sm) {
+            padding: 30px 40px;
+        }
+
+        &:nth-child(2) {
+            margin-top: 100px;
+
+            @include respond-to(sm) {
+                margin-top: 80px;
+            }
+        }
+
+        .dot {
+            padding: 5px;
+            width: auto;
+
+            .shape {
+                width: 15px;
+                height: 15px;
+                background: #FFFFFF;
+                box-shadow: 0 0 0 6px #04091A;
+                transform: rotate(45deg);
+            }
+        }
+
+        .details {
+            margin-left: 35px;
+
+            .title {
+                display: flex;
+                align-items: center;
+                margin-bottom: 2rem;
+
+                .number {
+                    font-family: 'Lato', sans-serif;
+                    @include fontsize(60, 40);
+                    margin-right: 20px;
+                    color: $secondaryColor;
+
+                    @include respond-to(sm) {
+                        @include fontsize(50, 30);
+                    }
+
+                    span {
+                        position: relative;
+                        top: -4px;
+                    }
+                }
+
+                h3 {
+                    font-family: 'Lato', sans-serif;
+                    @include fontsize(38, 40);
+
+                    @include respond-to(sm) {
+                        @include fontsize(30, 32);
+                    }
+                }
+            }
+
+            p {
+                @include fontsize(16, 22);
+
+                @include respond-to(sm) {
+                    @include fontsize(14, 20);
+                }
+            }
+        }
+
+        &.done {
+            .dot .shape {
+                background: $secondaryColor;
+            }
+        }
+    }
+}
+

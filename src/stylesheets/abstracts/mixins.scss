@@ -1,0 +1,74 @@
+
+@mixin fontsize($size, $lineHeight: null){
+    font-size: $size + px;
+    font-size: ($size / 10) + rem;
+    @if $lineHeight {
+        line-height: $lineHeight + px;
+        line-height: ($lineHeight / 10) + rem;
+    }
+}
+
+@mixin border-radius($valeur){
+    -webkit-border-radius: $valeur;
+    -moz-border-radius: $valeur;
+    border-radius: $valeur;
+}
+
+@mixin transition($effet, $duree, $ease: ease-out){
+    -o-transition: $effet $ease $duree;
+    -webkit-transition: $effet $duree $ease;
+    transition: $effet $duree $ease;
+}
+
+
+@mixin transform($string){
+    transform:$string;
+    -webkit-transform: $string;
+}
+
+
+// Responsive breakpoint manager
+// $breakpoint = xs, sm, md or lg
+// @requires $breakpoints in variables.scss
+@mixin respond-to($breakpoint) {
+    $raw-query: map-get($breakpoints, $breakpoint);
+
+    @if $raw-query {
+        $query: if(
+            type-of($raw-query) == 'string',
+            unquote($raw-query),
+            inspect($raw-query)
+            );
+
+        @media #{$query} {
+            @content;
+        }
+    } @else {
+        @error 'No value found for `#{$breakpoint}`. '
+        + 'Please make sure it is defined in `$breakpoints` map.';
+    }
+}
+
+@mixin respond-to-only($breakpoint) {
+    $raw-query: map-get($breakpoints, $breakpoint);
+
+    @if $raw-query {
+        $query: if(
+                        type-of($raw-query) == 'string',
+                        unquote($raw-query),
+                        inspect($raw-query)
+        );
+
+        @media #{$query} {
+            @content;
+        }
+    } @else {
+        @error 'No value found for `#{$breakpoint}`. '
+        + 'Please make sure it is defined in `$breakpoints` map.';
+    }
+}
+
+@mixin attribut-color-opacity($attribut, $color, $opacity) {
+    $attribut: $color;  /*Fallback */
+    $attribut: rgba($color, $opacity);
+}

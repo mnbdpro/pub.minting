@@ -1,0 +1,25 @@
+//* -- Couleur -- */
+
+$primaryColor: #272E38;
+$secondaryColor: #ec1818;
+
+$white: #FFFFFF;
+$black: #1D1D1B;
+
+//* -- Breakpoints -- */
+$breakpoints: (
+    'xs': (max-width: 575px),
+    'sm': (max-width: 767px),
+    'md': (max-width: 991px),
+    'lg': (max-width: 1199px),
+    'xl': (max-width: 1399px),
+);
+$breakpointsInverse: (
+    'xs': (min-width: 576px),
+    'sm': (min-width: 768px),
+    'md': (min-width: 992px),
+    'lg': (min-width: 1200px),
+    'xl': (min-width: 1400px),
+);
+
+$grid-gutter-width: 3rem;

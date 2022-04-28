@@ -1,0 +1,83 @@
+
+.Team {
+    padding-bottom: 8rem;
+
+    @include respond-to(sm) {
+        padding-bottom: 6rem;
+    }
+
+    &-title {
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+        @include fontsize(40, 50);
+        margin-bottom: 4rem;
+
+        @include respond-to(sm) {
+            margin-bottom: 3rem;
+            @include fontsize(30, 40);
+        }
+    }
+
+    &-member {
+        background: #04091A;
+        padding: 2rem;
+        height: 100%;
+
+        @include respond-to(sm) {
+            margin-bottom: 3rem;
+            height: auto;
+        }
+
+        &-picture {
+            height: 47rem;
+
+            @include respond-to(xl) {
+                height: 38rem;
+            }
+
+            @include respond-to(lg) {
+                height: 31rem;
+            }
+
+            @include respond-to(md) {
+                height: 22rem;
+            }
+
+            @include respond-to(sm) {
+                height: 40rem;
+            }
+        }
+
+        &-title {
+            font-family: 'Lato', sans-serif;
+            font-weight: bold;
+            @include fontsize(40, 50);
+            margin-top: .2rem;
+            margin-bottom: .6rem;
+            color: $secondaryColor;
+
+            @include respond-to(sm) {
+                @include fontsize(30, 40);
+                margin-bottom: .5rem;
+            }
+        }
+
+        &-role {
+            @include fontsize(26, 30);
+            margin-bottom: 1rem;
+
+            @include respond-to(sm) {
+                @include fontsize(24, 28);
+            }
+        }
+
+        &-description {
+            @include fontsize(20, 28);
+
+            @include respond-to(sm) {
+                @include fontsize(18, 26);
+            }
+        }
+    }
+}
+
