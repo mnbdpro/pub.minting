@@ -11,7 +11,7 @@ const mainnetAbi = [
     }
 ];
 
- const cost = "870000000000000000";
+ const cost = "200000000000000000";
 
  var Web3;
  var window;
